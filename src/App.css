@@ -1,12 +1,23 @@
+body{
+  background-image: url('./img/watercolor-back-school-background_52683-68646.webp');
+  background-size: 100vw 100vh;
+}
+
 #root{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.header{
+  text-align: center;
+}
 .to-do {
   width: 700px;
   margin: 50px;
+  background-color:rgb(250, 190, 137) ;
+  border-radius: 20px;
+  border: 3px solid rgb(245, 161, 5);
   
 }
 
@@ -17,6 +28,7 @@
 
 .input input{
   height: 30px;
+  width: 90%;
 
 }
 .input button{
@@ -28,6 +40,7 @@
 .list{
   border: 1px solid ;
   text-align: center;
+  padding: 10px;
 }
 
 .list-item{
