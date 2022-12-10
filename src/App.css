@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 body{
   background-image: url('./img/watercolor-back-school-background_52683-68646.webp');
   background-size: 100vw 100vh;
@@ -11,40 +15,81 @@ body{
 
 .header{
   text-align: center;
+  background-color:rgb(250, 190, 137);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid rgb(245, 161, 5);
 }
+
 .to-do {
   width: 700px;
   margin: 50px;
-  background-color:rgb(250, 190, 137) ;
   border-radius: 20px;
   border: 3px solid rgb(245, 161, 5);
+  background-color:rgb(255, 228, 204);
   
 }
 
-.input{
-  border: 1px solid ;
-  text-align: center;
+.input-wrapper{
+  /* text-align: center; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color:rgb(250, 190, 137);
+  border-radius: 20px;
+  border: 3px solid rgb(245, 161, 5);
 }
 
-.input input{
-  height: 30px;
-  width: 90%;
+.input-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-fields input{
+  /* height: 30px;
+  width: 90%; */
+  margin: 10px;
 
 }
-.input button{
+
+/* .input-fields input[type="text"]{
+  width: 300px;
+  background-color: aqua;
+
+} */
+
+.input-fields p{
+  margin: 10px 10px 0 10px;
+
+}
+
+.input-wrapper button{
   height: 30px;
   width: 40px;
 }
 
-
-.list{
-  border: 1px solid ;
+.add-item {
   text-align: center;
   padding: 10px;
+  margin: 10px;
+  background-color:rgb(250, 190, 137);
+  border-radius: 20px;
+  border: 3px solid rgb(245, 161, 5);
+}
+
+.list{
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background-color:rgb(250, 190, 137) ;
+  border-radius: 20px;
+  border: 3px solid rgb(245, 161, 5);
 }
 
 .list-item{
-  height: 50px;
   border: 1px solid ;
   display: flex;
   justify-content: space-between;

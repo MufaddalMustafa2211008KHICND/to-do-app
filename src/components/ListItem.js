@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function ListItem({ data, id, todo, setTodo }) {
+function ListItem({ data, id, title,dueDate, todo, setTodo ,setAddItem }) {
 
     const [isEdit, setIsEdit] = useState(false)
     const [editData, setEditData] = useState(data);
@@ -40,10 +40,13 @@ function ListItem({ data, id, todo, setTodo }) {
         <>
             <div className="list-item">
                 <div className="list-item-content">
-                    {isEdit ? <input type="text" value={editData} onChange={handleEdit} /> : data}
+                    {/* {isEdit ? <input type="text" value={editData} onChange={handleEdit} /> : <p>data</p>} */}
+                    <h3>{title}</h3>
+                    <p>{data}</p>
+                    <p>{dueDate}</p>
                 </div>
                 <div className="list-item-btn">
-                    <button onClick={onEdit}>{isEdit ? 'OK' : 'Edit'}</button>
+                    <button onClick={onEdit}>Edit</button>
                     <button onClick={onDelete}><i class="fa fa-trash"></i></button>
                 </div>
             </div>
