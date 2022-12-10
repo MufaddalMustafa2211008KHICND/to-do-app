@@ -96,9 +96,10 @@ body{
 
 }
 .list-item-content {
-  width: 80%;
   padding: 10px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
  
 }
 .list-item-btn{

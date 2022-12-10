@@ -11,7 +11,7 @@ function List({ todo, setTodo, setAddItem }) {
             <div className='list'>
 
                 {todo.length === 0 && <div>Nothing to show</div>}
-                {todo.map(({ id,title, dueDate, text }) => <ListItem key={id} id={id} data={text} title={title} dueDate={dueDate} todo={todo} setTodo={setTodo} setAddItem={setAddItem} />)}
+                {todo.map(({ id,title, dueDate, text }) => <ListItem key={id} id={id} data={text} title={title} dueDate={dueDate} todo={todo} setTodo={setTodo} />)}
             </div>
         </>
     )

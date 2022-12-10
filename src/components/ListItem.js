@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
-function ListItem({ data, id, title,dueDate, todo, setTodo ,setAddItem }) {
+function ListItem({ data, id, title,dueDate, todo, setTodo }) {
 
     const [isEdit, setIsEdit] = useState(false)
     const [editData, setEditData] = useState(data);
+    const [editTitle, setEditTitle] = useState(title);
+    const [editDate, setEditDate] = useState(dueDate);
 
     const onDelete = () => {
         const newArray = todo.filter((item) => item.id !== id)
@@ -14,7 +16,7 @@ function ListItem({ data, id, title,dueDate, todo, setTodo ,setAddItem }) {
         if (isEdit) {
             const updatedTodo = todo.map((item) => {
                 if (id === item.id) {
-                    const updatedItem = { ...item, text: editData }
+                    const updatedItem = { ...item, text: editData, title: editTitle, dueDate: editDate }
                     return updatedItem;
                 }
                 else {
@@ -31,19 +33,14 @@ function ListItem({ data, id, title,dueDate, todo, setTodo ,setAddItem }) {
 
     }
 
-    const handleEdit = (e) => {
-        setEditData(e.target.value)
-        console.log(e.target.value)
-    }
-
     return (
         <>
             <div className="list-item">
                 <div className="list-item-content">
-                    {/* {isEdit ? <input type="text" value={editData} onChange={handleEdit} /> : <p>data</p>} */}
-                    <h3>{title}</h3>
-                    <p>{data}</p>
-                    <p>{dueDate}</p>
+                    {isEdit ? <><p>Edit title:</p><input type="text" value={editTitle} onChange={e => setEditTitle(e.target.value)} /></> : <h3>{title}</h3>}
+                    {isEdit ? <><p>Edit task details:</p><input type="text" value={editData} onChange={e => setEditData(e.target.value)} /></> : <p>{data}</p>}
+                    {isEdit ? <><p>Edit due date:</p><input type="date" value={editDate} onChange={e => setEditDate(e.target.value)} /></> : <p>{dueDate}</p>}
+                    
                 </div>
                 <div className="list-item-btn">
                     <button onClick={onEdit}>Edit</button>
