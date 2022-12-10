@@ -43,7 +43,7 @@ function ListItem({ data, id, title,dueDate, todo, setTodo }) {
                     
                 </div>
                 <div className="list-item-btn">
-                    <button onClick={onEdit}>Edit</button>
+                    <button onClick={onEdit}>{isEdit ? 'Done' : 'Edit'}</button>
                     <button onClick={onDelete}><i class="fa fa-trash"></i></button>
                 </div>
             </div>
