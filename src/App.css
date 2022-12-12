@@ -2,20 +2,20 @@
   margin: 0;
 }
 
-body{
+body {
   background-image: url('./img/watercolor-back-school-background_52683-68646.webp');
   background-size: 100vw 100vh;
 }
 
-#root{
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header{
+.header {
   text-align: center;
-  background-color:rgb(250, 190, 137);
+  background-color: rgb(250, 190, 137);
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
@@ -27,18 +27,19 @@ body{
   margin: 50px;
   border-radius: 20px;
   border: 3px solid rgb(245, 161, 5);
-  background-color:rgb(255, 228, 204);
-  
+  background-color: rgb(255, 228, 204);
+
 }
 
-.input-wrapper{
+.input-wrapper {
   /* text-align: center; */
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   margin: 10px;
-  background-color:rgb(250, 190, 137);
+  background-color: rgb(250, 190, 137);
   border-radius: 20px;
   border: 3px solid rgb(245, 161, 5);
 }
@@ -48,64 +49,125 @@ body{
   flex-direction: column;
 }
 
-.input-fields input{
-  /* height: 30px;
-  width: 90%; */
+.input-fields input {
+  padding: 10px;
+  font-size: 18px;
+  width: 400px;
+
+}
+
+.input-fields p {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.input-buttons {
+  margin: 20px;
+}
+
+.input-buttons button {
   margin: 10px;
-
-}
-
-/* .input-fields input[type="text"]{
-  width: 300px;
-  background-color: aqua;
-
-} */
-
-.input-fields p{
-  margin: 10px 10px 0 10px;
-
-}
-
-.input-wrapper button{
-  height: 30px;
-  width: 40px;
+  font-size: 22px;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .add-item {
   text-align: center;
-  padding: 10px;
+  /* padding: 10px; */
   margin: 10px;
-  background-color:rgb(250, 190, 137);
+  /* background-color: rgb(250, 190, 137);
   border-radius: 20px;
-  border: 3px solid rgb(245, 161, 5);
+  border: 3px solid rgb(245, 161, 5); */
 }
 
-.list{
+.add-item button {
+  margin: 10px;
+  font-size: 22px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(250, 190, 137);
+  border: 2px solid black;
+}
+
+.add-item button:hover {
+  background-color: rgb(255, 228, 204);
+  color: rgb(250, 190, 137);
+}
+
+.list {
   text-align: center;
-  padding: 10px;
   margin: 10px;
-  background-color:rgb(250, 190, 137) ;
+  background-color: rgb(250, 190, 137);
   border-radius: 20px;
   border: 3px solid rgb(245, 161, 5);
 }
 
-.list-item{
-  border: 1px solid ;
+.nothing {
+  margin: 30px;
+}
+
+.list-item {
+  border: 1px solid;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  background-color: antiquewhite;
+  margin: 10px;
 
 }
+
 .list-item-content {
+  border: 1px solid;
   padding: 10px;
   text-align: left;
   display: flex;
   flex-direction: column;
- 
+  /* white-space: nowrap; */
+  word-wrap: break-word;
+  overflow: hidden;
 }
-.list-item-btn{
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
+
+.details {
+  margin: 10px 0;
+}
+
+.date {
+  font-size: 13px;
+}
+
+.title {
+ margin: 5px 0;
+}
+
+.edit {
+  padding: 5px;
+  font-size: 16px;
+  width: 400px;
+}
+
+.edit-date{
+  width: 120px;
+  padding: 3px;
+}
+
+.list-item-btn {
+  padding: 10px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.list-item-btn button {
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+  background-color: rgb(230, 154, 56);
+  /* font-size: 14px; */
+}
+
+.list-item-btn button:hover {
+  background-color: rgb(216, 170, 109);
 }
