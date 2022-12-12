@@ -112,13 +112,11 @@ body {
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
-  background-color: antiquewhite;
   margin: 10px;
 
 }
 
 .list-item-content {
-  border: 1px solid;
   padding: 10px;
   text-align: left;
   display: flex;
@@ -153,7 +151,6 @@ body {
 
 .list-item-btn {
   padding: 10px;
-  border: 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
