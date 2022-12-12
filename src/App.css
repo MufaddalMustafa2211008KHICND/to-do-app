@@ -91,8 +91,7 @@ body {
 }
 
 .add-item button:hover {
-  background-color: rgb(255, 228, 204);
-  color: rgb(250, 190, 137);
+  background-color: rgb(230, 154, 56);
 }
 
 .list {
